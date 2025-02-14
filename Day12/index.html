@@ -1,0 +1,198 @@
+<!-- DOM ===DOM(Document object model) is define an interface that allows programing languages (like javascript ) -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model </title>
+ </head>
+ <style>
+  #roomId{
+    border: 1px solid black;
+    height: 69px;
+  
+    
+  }
+  .guest{
+    border: 1px solid green;
+   text-align: center;
+   margin-top: 20PX;
+    
+  }
+ </style>
+ <body>
+
+  <h1 id="myId">id selector </h1>
+
+  <h2 id="myNameId">heyyyy</h2>
+
+  <h4 class="myClass">awdiz</h4>
+<div class="myRoll">my name is this
+  </div>
+  <p class="rohitSu">hello world </p>
+  
+<h3 class="className">class selector</h3>
+
+<div id="myRate"> 
+ 
+</div>
+<div id="container">
+  <p>
+    this is my page first 
+  </p> </div>
+<button id="myButton">submit</button>
+<br>
+<div id="roomId">
+  <button id="guestId">Room 2</button>
+</div>
+<br>
+<button id="classId"> submit</button>
+
+
+<input id="username" type="text" placeholder="Type your name.." />
+
+
+<input id="sessionUser"  type="text" placeholder="type your name....">
+  <script>
+//Selecting Elements
+
+//getElementById()
+// selects an elements by its id attributes .it returns the first element with the matching id  
+let element = document.getElementById("myId");
+console.log(element); 
+
+let element2 = document.getElementById("myNameId");
+console.log(element2);
+
+//querySelector()
+//Selects the first element that matches a specified css selector(class,id, tag) if ican you class
+//first they can use the (.) at the class 
+let element3= document.querySelector(".myClass");
+console.log(element3);
+
+//qureySelectorAll() = Selects all elements that match a specified CSS selector and returns a NodeList
+let elements4 = document.querySelectorAll("div");
+console.log(elements4);
+
+
+//getElementByClassName();
+//Selects elements by class name.
+
+
+//this question are may i ask from the sir 
+let elements= document.getElementByClassName("className")
+console.log(elements);
+
+
+//getElementByTagName()
+//Selects elements by thier teg name ( <div>,<p>)
+
+  let element5 = document.getElementsByTagName("rohitSu");
+  console.log(element5);
+
+
+//Changing the html and css with the help of javascript 
+
+
+//changing html(you can change the HTML content of an element using innerhtml  property)
+
+document.getElementById("myId").innerHTML="New Content";
+
+
+//changing CSS   
+//You can change style of an element using the style propety
+document.getElementById("myId").style.color = "red";
+document.getElementById("myId").style.fontSize = "20px";
+
+//Creating Elements 
+//To create new HTML elements, you use {document.createElement()}.
+
+
+let newElement = document.createElement("p");
+newElement.textContent ="This is a new div element";
+
+//Apending Elements 
+//To append an element to another element, use appendChild().
+document.getElementById("container").appendChild(newElement);
+  // Removing Elements ===
+  // To remove an element, use removeChild().
+  let parentElement = document.getElementById("container");
+  parentElement.removeChild(newElement);
+
+
+  newElement.remove();
+
+//Event Handling
+//Events in JavaScript can be triggered by user actions like clicks, key presses, or mouse movements. To handle events, you attach event listeners to element .
+  
+//addEventListener()
+//this method allows you to attach an event listener to an element. It is used to specify the type of event(e.g click, keydown) and the function to run when the events occurs..
+
+function clickHandler() {
+alert("Button clicked!");
+}
+document.getElementById("myButton").addEventListener("click", clickHandler);
+
+
+// To remove the event listener
+  //removeEventListener().
+  //This methode removes an event listner from an element. It requires the same arguments as
+
+document.getElementById("myButton").removeEventListener("click", clickHandler);
+
+//event Bubbling 
+//When an event is triggered on an element, it bubbles up through its ancestors is the DOM hierarchy. This means that an event on a child element can be cought by its parent element .
+
+document.getElementById("roomId").addEventListener("click",function(){
+  alert("Parent clicked");
+});
+
+
+document.getElementById("guestId").addEventListener("click",function (){
+  alert("clicked")
+});
+
+//Event Delegation 
+// Event delegation is the practice of attaching a single event listener to a parent element that will handle events for child elements. This approach is particularly useful for dynamicallly added elements .
+
+document.getElementById("classId").addEventListener("click",function(event){
+  if(event.target && event.target.matches("button")){
+    alert("welcome the next page!");
+  }
+});
+
+//localStorage & sessionStrorage
+
+//Both localStorage and sessionStorage are used for storing data on the client-side in a browser.
+
+
+//LocalStorage== data stored in localStorage persists even when the browser is closed and responed .
+// Data is stored as key-value pairs.
+
+//Store Data
+
+localStorage.setItem("username", "hello");
+
+//Retrive data 
+let username = localStorage.getItem("username");
+console.log(username);
+
+//Remove data
+// localStorage.removeItem("username");
+
+//sessionStorage
+//Temporary storage : Data stored in sessionStorage is cleared when the browser session  ends (when the tab is closed).
+// Data is also stored as key-values pairs.
+
+sessionStorage.setItem("sessionUser","world");
+
+//Retrive data
+let sessionUser = sessionStorage.getItem("sessionUser");
+console.log(sessionUser);   //world
+
+
+  </script>
+ </body>
+ </html>
