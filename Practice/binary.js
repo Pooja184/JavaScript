@@ -1,6 +1,6 @@
 console.log("find number in array");
 let nums = [1, 2, 3, 4, 5, 6];
-let targetN = 7;
+let targetN = 2;
 
 const target = (nums,targetN) => {
   let left = 0;
@@ -8,7 +8,7 @@ const target = (nums,targetN) => {
   while (left <=right) { 
       //ex. left= 0idx, right=5, then the condition will be 0<5
       let midElementIdx = Math.floor((left+right) / 2);
-    //   console.log(midElementIdx);
+      // console.log(midElementIdx);
       let midElementEl=nums[midElementIdx]
       if(targetN==midElementEl){
         // console.log("num found");

@@ -141,4 +141,11 @@ for(i=1;i<=10;i++){
 }
 //use a loop to check if a given number is prime
 
+const  stringLetter=()=>{
+    let str="hello";
+    let rep=""
+    for(let i=0;i<=str.length;i++){
+        str[i]
+    }
+}
 

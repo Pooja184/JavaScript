@@ -1,0 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.products>a{
+    text-decoration: none;
+    color: rgb(167, 161, 161);
+    font-weight: bold;
+    margin: 10px;
+    font-size: large;
+    
+}
+.products>a:hover{
+    color: white;
+}
+
