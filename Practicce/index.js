@@ -93,20 +93,22 @@ const anagrams=()=>{
         console.log("String is not anagram");
         return;
     }
+    let isAnagram=false;
     for(let i=0;i<=str1.length-1;i++){
-        let isAnagram=false;
         for(let j=0;j<=str2.length-1;j++){
             if(str1[i]===str2[j]){
                 isAnagram=true;
                 break;
+            }else{
+                isAnagram=false;
             }
         }
-        if(isAnagram===true){
+    }
+     if(isAnagram===true){
             console.log("Strings are anagrams")
         }else{
             console.log("Strings are not anagrams")
         }
-    }
 }
 // anagrams()
 
