@@ -43,20 +43,23 @@ const reverseOptimize = () => {
 
 const prime = () => {
   let num = 12;
-  let md = 0;
-  for (let i = 1; i <= num; i++) {
+  let nd = 0;
+  for (let i = 1; i <= num/2; i++) {
     if (num % i === 0) {
-      md++;
+      nd++;
     }
-    if (md > 2) {
-      console.log(num, " not prime");
+    if(nd>2){
       break;
+    } 
+  }
+  if (nd > 2) {
+      console.log(num, " not prime");
+
     } else {
       console.log(num, "prime");
-      break;
+    
     }
-  }
-  console.log(md);
+  console.log(nd);
 };
 // prime();
 
@@ -228,3 +231,24 @@ if(isPalindrome){
 
 // Find missing number in array 1 to N
 // Input: [1, 2, 4, 5] → Output: 3
+
+
+const flattenArr=()=>{
+  let arr= [1, [2, [3, 4]], 5];
+
+}
+
+// flattenArr(); //not completed
+
+const rotateArr=()=>{
+    let arr=[1,2,3,4,5];
+    // let newArr=[];
+    let firstEl=arr[0];
+    for(let i=0;i<arr.length;i++){
+        // newArr[newArr.length]=arr[i]
+        arr[i]=arr[i+1];
+    }
+    arr[arr.length-1]=firstEl;
+    console.log(arr);
+}
+// rotateArr();
