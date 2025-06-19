@@ -1,26 +1,3 @@
-// const occuCount=()=>{
-//     let str="the dog is lazzy";
-//     let obj={};
-//     for(let i=0;i<=str.length;i++){
-//         for(let j=i+1;j<=str.length;j++){
-//             if(str[i]===str[j]){
-//                 console.log(str[i])
-//             }
-//         }
-//     }
-
-// }
-// occuCount();
-
-    // const occuCount=()=>{
-    //     let str="the dog is lazzy";
-    //     let obj={};
-    //     for(let i=0;i<str.length;i++){
-    //         console.log(obj[str[i]])
-    //     }
-
-    // }
-    // occuCount();
 
     const occuCount = () => {
         let str = "The quick brown box for the lazy dog";
@@ -41,7 +18,7 @@
         console.log(obj); 
     }
     
-    // occuCount();
+    occuCount();
 
 const rever=()=>{
     let str="hello";
