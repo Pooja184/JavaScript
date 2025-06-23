@@ -154,4 +154,4 @@ for(let i=0;i<str1.length;i++){
   console.log("Strings are not anagrams");
  }
 }
-anagrams();
+// anagrams();
