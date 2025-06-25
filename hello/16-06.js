@@ -1,4 +1,5 @@
 // Find second largest number in an array
+// Q1
 const secLargest = () => {
   let arr = [1, 8, 4, 5, 6, 3];
   let large = arr[0];
@@ -17,6 +18,7 @@ const secLargest = () => {
 // secLargest();
 
 //  Count Frequency of Characters in a String
+// Q2
 
 const frequency = () => {
   let str = "hadvyvwAbsadbchbweyu";
@@ -31,6 +33,8 @@ const frequency = () => {
   console.log(newStr);
 };
 // frequency();
+
+// Q3
 
 const armstrong = () => {
   let number = 370;
@@ -50,6 +54,8 @@ const armstrong = () => {
   }
 };
 // armstrong();
+
+// Q3
 
 const armstrongOptimal = () => {
   let number = 25;
@@ -74,6 +80,8 @@ const armstrongOptimal = () => {
 // armstrongOptimal();
 
 //reverse a number
+// Q4
+
 const reverse = () => {
   let num = 1234;
   let rever = 0;
@@ -89,6 +97,7 @@ const reverse = () => {
 // reverse();
 
 // Remove Duplicates from Array without Inbuilt
+// Q5
 
 const removeDuplicates = () => {
   let arr = [1, 2, 1, 4, 2, 1];
@@ -110,6 +119,8 @@ console.log(newArr)
 };
 // removeDuplicates();
 
+// Q5
+
 const removeDuplicatesBrut=()=>{
     let arr=[1,2,1,4,2,1];
     let newArr=[];
@@ -127,6 +138,7 @@ const removeDuplicatesBrut=()=>{
 // Input: "listen", "silent"
 // Output: true
 
+// Q6
 
 const anagrams=()=>{
   let str1="silent";
@@ -155,3 +167,24 @@ for(let i=0;i<str1.length;i++){
  }
 }
 // anagrams();
+
+//  Print All Prime Numbers Between 1 to N
+const primeNumbers=()=>{
+  let n=20;
+  for(let i=2;i<=n;i++){
+
+    let isPrime=true;
+    // j<i
+    // j<=Math.sqrt(i)
+    for(let j=2;j*j<=i;j++){
+      if(i%j===0){
+        isPrime=false;
+        break;
+      }
+    }
+    if (isPrime) {
+      console.log(i);
+    }
+  }
+}
+primeNumbers();
