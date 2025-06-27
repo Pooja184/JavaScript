@@ -187,4 +187,5 @@ const primeNumbers=()=>{
     }
   }
 }
-primeNumbers();
+// primeNumbers();
+
