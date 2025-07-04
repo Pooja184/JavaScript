@@ -253,3 +253,36 @@ const rotateArr=()=>{
 }
 // rotateArr();
 
+const thirdLargest=()=>{
+  let arr=[3,6,2,10,8,4,9];
+  let max=arr[0];
+  let secMax=arr[1];
+  let thirdMax=arr[2];
+  for(let i=0;i<arr.length;i++){
+      if(arr[i]>max){
+        // let temp=secMax;
+        thirdMax=secMax;
+        secMax=max;
+        max=arr[i];
+      }else if(arr[i]>thirdMax && arr[i]!=secMax && arr[i] !=max){
+        thirdMax=arr[i];
+      }
+  }
+  console.log(thirdMax);
+}
+// thirdLargest();
+
+const secLargest=()=>{
+   let arr=[2,5,4,7,6,1];
+   let max=Math.max(arr[0],arr[1]);
+   let secMax=Math.min(arr[0],arr[1]);
+//    console.log(secMax)
+   for(let i=0;i<=arr.length-1;i++){
+    if(arr[i]>max){
+        secMax=max;
+        max=arr[i]
+    }
+   }
+   console.log(secMax);
+}
+// secLargest()
