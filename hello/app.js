@@ -254,17 +254,20 @@ const rotateArr=()=>{
 // rotateArr();
 
 const thirdLargest=()=>{
-  let arr=[3,6,2,10,8,4,9];
-  let max=arr[0];
-  let secMax=arr[1];
-  let thirdMax=arr[2];
+  let arr=[3,9,6,2,10,8];
+  let max=0;
+  let secMax=0;
+  let thirdMax=0;
   for(let i=0;i<arr.length;i++){
       if(arr[i]>max){
         // let temp=secMax;
         thirdMax=secMax;
         secMax=max;
         max=arr[i];
-      }else if(arr[i]>thirdMax && arr[i]!=secMax && arr[i] !=max){
+      }else if(arr[i]>secMax && arr[i]!=thirdMax && arr[i] !=max){
+        thirdMax=secMax;
+        secMax=arr[i];
+      }else if(arr[i]>thirdMax && arr[i]!=thirdMax && arr[i] !=max){
         thirdMax=arr[i];
       }
   }
@@ -272,17 +275,15 @@ const thirdLargest=()=>{
 }
 // thirdLargest();
 
-const secLargest=()=>{
-   let arr=[2,5,4,7,6,1];
-   let max=Math.max(arr[0],arr[1]);
-   let secMax=Math.min(arr[0],arr[1]);
-//    console.log(secMax)
-   for(let i=0;i<=arr.length-1;i++){
-    if(arr[i]>max){
-        secMax=max;
-        max=arr[i]
-    }
-   }
-   console.log(secMax);
-}
-// secLargest()
+//--------------------dry run--------------------------//
+//  arr[i]=     3 9 6 2 10
+//condition1=   true true false false true
+    // else
+//condition2=true true false
+//third = 0   0   3   6 ans
+//  sec=  0   3   6   9
+//  max=  3   9       10
+
+//--------------------dry run--------------------------//
+
+
