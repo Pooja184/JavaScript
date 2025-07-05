@@ -287,9 +287,11 @@ const thirdLargest=()=>{
 //--------------------dry run--------------------------//
 
 const reverseNum=()=>{
-  let num=897982;
+  let num= 897982;
   let reverse=0;
-  while(num>0){
+   let isNegative = num < 0;
+   num=Math.abs(num);
+  while(num!=0){
     let rem=num%10;
     // console.log(rem,"rem")
     reverse=Math.floor((reverse*10)+rem);
@@ -298,6 +300,10 @@ const reverseNum=()=>{
     // console.log(num,"num")
 
   }
+   if (isNegative) {
+    reverse = -reverse; // Make it negative again
+  }
+
   console.log(reverse);
 }
 reverseNum();
