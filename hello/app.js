@@ -286,4 +286,19 @@ const thirdLargest=()=>{
 
 //--------------------dry run--------------------------//
 
+const reverseNum=()=>{
+  let num=897982;
+  let reverse=0;
+  while(num>0){
+    let rem=num%10;
+    // console.log(rem,"rem")
+    reverse=Math.floor((reverse*10)+rem);
+    // console.log(reverse,"rev")
+    num=Math.floor(num/10);
+    // console.log(num,"num")
+
+  }
+  console.log(reverse);
+}
+reverseNum();
 
